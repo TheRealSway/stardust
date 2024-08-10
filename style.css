@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    font-family: 'Georgia', serif; /* Use a serif font for a more poetic feel */
+    font-family: 'Georgia', serif; 
 }
 
 nav {
@@ -50,15 +50,16 @@ nav a:hover {
 }
 
 .search-bar {
-    max-width: 250px;
-    width: 100%;
-    padding: 8px;
-    border: 1px solid red;
+    max-width: 150px;
+    width: 85%;
+    padding: 5px;
+    border: 1px ;
     border-radius: 15px;
     background-color: #f0f0f0;
-    box-shadow: inset 5px 5px 8px red, inset -5px -5px 8px #ffffff;
+    box-shadow: inset 5px 5px 8px , inset -5px -5px 8px #ffffff;
     display: flex;
-    align-items: center;
+    align-items: right;
+	margin-left: 75%;
 }
 
 .search-bar input {
