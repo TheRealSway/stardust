@@ -41,12 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadLink.download = novel.title;
             downloadLink.textContent = 'Download Novel';
 
-            const viewLink = document.createElement('a');
-            viewLink.className = 'view-btn';
-            viewLink.href = novel.file;
-            viewLink.target = '_blank';
-            viewLink.textContent = 'Read Online';
+            // Remove the following block to exclude the "Read Online" button
+            // const viewLink = document.createElement('a');
+            // viewLink.className = 'view-btn';
+            // viewLink.href = novel.file;
+            // viewLink.target = '_blank';
+            // viewLink.textContent = 'Read Online';
 
+            // Append elements to their respective containers
             headerDiv.appendChild(smallCoverDiv);
             headerDiv.appendChild(title);
 
@@ -54,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
             infoDiv.appendChild(author);
             infoDiv.appendChild(description);
             infoDiv.appendChild(downloadLink);
-            infoDiv.appendChild(viewLink);
 
             novelCard.appendChild(coverDiv);
             novelCard.appendChild(infoDiv);
