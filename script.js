@@ -1,31 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const novels = [
-        {
-            cover: 'just-deserts.jpg',
-            smallCover: 'just-deserts.jpg',
-            title: 'Just Deserts',
-            author: 'Author: Aniela Spring',
-            description: 'Pablo Perez, a Portuguese thirty-five-year-old man, together with his wife and twelve-year-old son Jack, arrives in America in search of the “American dream”.',
-            file: 'just-deserts-spring-stardust-literacy.pdf'
-        },
- {
-        cover: 'the-truth-about-the-lies.jpg',
-        smallCover: 'the-truth-about-the-lies.jpg',
-        title: 'The Truth About The Lies',
-        author: 'Author: Amrit Kaur',
-        description: 'Imagine falling in love with your kidnapper, but make it darker. That's what happens to Dahlia. This kidnapping has too many stages, hatred, love, whatever they feel in the end.',
-        file: 'the-truth-about-the-lies-stardust-literacy.pdf'
-    },
-    {
-        cover: 'the-playboys-crush-romance-stardust.jpg', 
-        smallCover: 'the-playboys-crush-romance-stardust.jpg',
-        title: 'The Playboy\'s Crush',
-        author: 'Deborah A. Olaleye',
-        description: 'In the vibrant heart of Miami, a city where wealth and beauty collide, Shane Williams – a billionaire CEO with a playboy reputation – encounters a woman who makes his heart beat in ways money can\'t buy',
-        file: 'the-playboys-crush-miami-billionaire-playboys-trilogy-1-stardustliteracy.pdf'
-    }
-        ];
-
     const novelContainer = document.getElementById('novelContainer');
     const searchInput = document.querySelector('.search-bar input');
     const clearSearch = document.getElementById('clear-search');
@@ -74,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
             viewLink.target = '_blank';
             viewLink.textContent = 'Read Online';
 
-
             headerDiv.appendChild(smallCoverDiv);
             headerDiv.appendChild(title);
 
@@ -82,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             infoDiv.appendChild(author);
             infoDiv.appendChild(description);
             infoDiv.appendChild(downloadLink);
-            infoDiv.appendChild(viewLink); // Add the view link
+            infoDiv.appendChild(viewLink);
 
             novelCard.appendChild(coverDiv);
             novelCard.appendChild(infoDiv);
@@ -91,16 +63,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    renderNovels(novels);
+    // Fetch JSON file and render novels
+    fetch('path/to/novels.json')
+        .then(response => response.json())
+        .then(novels => {
+            renderNovels(novels);
 
-    searchInput.addEventListener('input', (event) => {
-        const searchTerm = event.target.value.trim().toLowerCase();
-        const filteredNovels = novels.filter(novel => novel.title.toLowerCase().includes(searchTerm));
-        renderNovels(filteredNovels);
-    });
+            searchInput.addEventListener('input', (event) => {
+                const searchTerm = event.target.value.trim().toLowerCase();
+                const filteredNovels = novels.filter(novel => novel.title.toLowerCase().includes(searchTerm));
+                renderNovels(filteredNovels);
+            });
 
-    clearSearch.addEventListener('click', () => {
-        searchInput.value = '';
-        searchInput.dispatchEvent(new Event('input'));
-    });
+            clearSearch.addEventListener('click', () => {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
+            });
+        })
+        .catch(error => console.error('Error loading novels:', error));
 });
