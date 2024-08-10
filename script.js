@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+   
+
     const novelContainer = document.getElementById('novelContainer');
     const searchInput = document.querySelector('.search-bar input');
     const clearSearch = document.getElementById('clear-search');
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             infoDiv.appendChild(author);
             infoDiv.appendChild(description);
             infoDiv.appendChild(downloadLink);
-            infoDiv.appendChild(viewLink);
+            infoDiv.appendChild(viewLink); // Add the view link
 
             novelCard.appendChild(coverDiv);
             novelCard.appendChild(infoDiv);
@@ -62,6 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
             novelContainer.appendChild(novelCard);
         });
     }
+
+    renderNovels(novels);
+
+    searchInput.addEventListener('input', (event) => {
+        const searchTerm = event.target.value.trim().toLowerCase();
+        const filteredNovels = novels.filter(novel => novel.title.toLowerCase().includes(searchTerm));
+        renderNovels(filteredNovels);
+    });
+
+    clearSearch.addEventListener('click', () => {
+        searchInput.value = '';
+        searchInput.dispatchEvent(new Event('input'));
+    });
+});
 
     // Fetch JSON file and render novels
     fetch('path/to/novels.json')
