@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.querySelector('.search-bar input');
     const clearSearch = document.getElementById('clear-search');
 
-
     function renderNovels(novels) {
         novelContainer.innerHTML = '';
         novels.forEach(novel => {
@@ -61,6 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadLink.download = novel.title;
             downloadLink.textContent = 'Download Novel';
 
+            const viewLink = document.createElement('a');
+            viewLink.className = 'view-btn';
+            viewLink.href = novel.file;
+            viewLink.target = '_blank';
+            viewLink.textContent = 'Read Online';
+
             headerDiv.appendChild(smallCoverDiv);
             headerDiv.appendChild(title);
 
@@ -68,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             infoDiv.appendChild(author);
             infoDiv.appendChild(description);
             infoDiv.appendChild(downloadLink);
+            infoDiv.appendChild(viewLink); // Add the view link
 
             novelCard.appendChild(coverDiv);
             novelCard.appendChild(infoDiv);
@@ -76,16 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     renderNovels(novels);
 
-   
     searchInput.addEventListener('input', (event) => {
         const searchTerm = event.target.value.trim().toLowerCase();
         const filteredNovels = novels.filter(novel => novel.title.toLowerCase().includes(searchTerm));
         renderNovels(filteredNovels);
     });
-
 
     clearSearch.addEventListener('click', () => {
         searchInput.value = '';
