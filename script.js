@@ -8,15 +8,23 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'Pablo Perez, a Portuguese thirty-five-year-old man, together with his wife and twelve-year-old son Jack, arrives in America in search of the “American dream”.',
             file: 'just-deserts-spring-stardust-literacy.pdf'
         },
-        {
-            cover: 'the-truth-about-the-lies.jpg',
-            smallCover: 'the-truth-about-the-lies.jpg',
-            title: 'The Truth About The Lies',
-            author: 'Author: Amrit Kaur',
-            description: 'Imagine falling in love with your kidnapper, but make it darker. That\'s what happens to Dahlia. This kidnapping has too many stages, hatred, love, whatever they feel in the end.',
-            file: 'the-truth-about-the-lies-stardust-literacy.pdf'
-        }
-    ];
+ {
+        cover: 'the-truth-about-the-lies.jpg',
+        smallCover: 'the-truth-about-the-lies.jpg',
+        title: 'The Truth About The Lies',
+        author: 'Author: Amrit Kaur',
+        description: 'Imagine falling in love with your kidnapper, but make it darker. That's what happens to Dahlia. This kidnapping has too many stages, hatred, love, whatever they feel in the end.',
+        file: 'the-truth-about-the-lies-stardust-literacy.pdf'
+    },
+    {
+        cover: 'the-playboys-crush-romance-stardust.jpg', 
+        smallCover: 'the-playboys-crush-romance-stardust.jpg',
+        title: 'The Playboy\'s Crush',
+        author: 'Deborah A. Olaleye',
+        description: 'In the vibrant heart of Miami, a city where wealth and beauty collide, Shane Williams – a billionaire CEO with a playboy reputation – encounters a woman who makes his heart beat in ways money can\'t buy',
+        file: 'the-playboys-crush-miami-billionaire-playboys-trilogy-1-stardustliteracy.pdf'
+    }
+        ];
 
     const novelContainer = document.getElementById('novelContainer');
     const searchInput = document.querySelector('.search-bar input');
@@ -59,6 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadLink.href = novel.file;
             downloadLink.download = novel.title;
             downloadLink.textContent = 'Download Novel';
+
+            const viewLink = document.createElement('a');
+            viewLink.className = 'view-btn';
+            viewLink.href = novel.file;
+            viewLink.target = '_blank';
+            viewLink.textContent = 'Read Online';
 
 
             headerDiv.appendChild(smallCoverDiv);
