@@ -1,0 +1,26 @@
+[
+    {
+        "cover": "just-deserts.jpg",
+        "smallCover": "just-deserts.jpg",
+        "title": "Just Deserts",
+        "author": "Author: Aniela Spring",
+        "description": "Pablo Perez, a Portuguese thirty-five-year-old man...",
+        "file": "just-deserts-spring-stardust-literacy.pdf"
+    },
+    {
+        "cover": "the-truth-about-the-lies.jpg",
+        "smallCover": "the-truth-about-the-lies.jpg",
+        "title": "The Truth About The Lies",
+        "author": "Author: Amrit Kaur",
+        "description": "Imagine falling in love with your kidnapper...",
+        "file": "the-truth-about-the-lies-stardust-literacy.pdf"
+    },
+    {
+        "cover": "the-playboys-crush-romance-stardust.jpg",
+        "smallCover": "the-playboys-crush-romance-stardust.jpg",
+        "title": "The Playboy's Crush",
+        "author": "Deborah A. Olaleye",
+        "description": "In the vibrant heart of Miami...",
+        "file": "the-playboys-crush-miami-billionaire-playboys-trilogy-1-stardustliteracy.pdf"
+    }
+]
