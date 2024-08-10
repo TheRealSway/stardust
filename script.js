@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Fetch JSON file and render novels
-    fetch('path/to/novels.json')
+    fetch('novels.json')
         .then(response => response.json())
         .then(novels => {
             renderNovels(novels);
