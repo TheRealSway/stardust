@@ -41,14 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadLink.download = novel.title;
             downloadLink.textContent = 'Download Novel';
 
-            // Remove the following block to exclude the "Read Online" button
-            // const viewLink = document.createElement('a');
-            // viewLink.className = 'view-btn';
-            // viewLink.href = novel.file;
-            // viewLink.target = '_blank';
-            // viewLink.textContent = 'Read Online';
-
-            // Append elements to their respective containers
+       
             headerDiv.appendChild(smallCoverDiv);
             headerDiv.appendChild(title);
 
