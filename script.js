@@ -60,11 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadLink.download = novel.title;
             downloadLink.textContent = 'Download Novel';
 
-            const viewLink = document.createElement('a');
-            viewLink.className = 'view-btn';
-            viewLink.href = novel.file;
-            viewLink.target = '_blank';
-            viewLink.textContent = 'Read Online';
 
             headerDiv.appendChild(smallCoverDiv);
             headerDiv.appendChild(title);
