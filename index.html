@@ -29,9 +29,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Unleash the Poetry of the Cosmos</h1>
+            <h1>Welcome to Stardust Literacy</h1>
             <p>Dive into a galaxy of words and emotions.</p>
-            <a href="#" class="cta-button">Explore Poems</a>
+            <a href="poems.html" class="cta-button">Explore Poems</a>
         </div>
         <canvas id="hero-canvas"></canvas>
     </section>
@@ -42,27 +42,28 @@
         <div class="featured-grid">
            
             <div class="poem-card">
-                <img src="poem-thumbnail.jpg" alt="Poem cover">
-                <h3>Title </h3>
-                <p>...</p>
-                <a href="#">Read More</a>
+                <img src="no1.jpg" alt="Poem cover">
+                <h3>Me In Disguise</h3>
+                <p>My broken heart's never going to be healed 
+It fought and lost once before </p>
+                <a href="poems.html">Read More</a>
             </div>
-            <!-- Repeat similar cards for more poems -->
+           
         </div>
     </section>
 
  
-    <!-- Blog/Updates Section -->
+   
     <section class="blog">
         <h2>Latest Novels</h2>
         <div class="blog-grid">
            
             <div class="blog-post">
-                <h3>Novel Title</h3>
-                <p>Summary of the Novel...</p>
-                <a href="#">Read More</a>
+                <h3>Just Deserts</h3>
+                <p>Pablo Perez, a Portuguese thirty-five-year-old man, together with his wife and twelve-year-old son Jack, arrives in America in search of the "American dream".</p>
+                <a href="novels.html">Read More</a>
             </div>
-            <!-- Repeat similar cards for more posts -->
+            
         </div>
     </section>
 
@@ -87,9 +88,9 @@
     </footer>
 
     <script>
-// JavaScript for Starfield Animation
+//  Starfield Animation
 
-// Setup starfield canvas
+// starfield canvas
 const heroCanvas = document.getElementById('hero-canvas');
 const ctx = heroCanvas.getContext('2d');
 let stars = [];
@@ -97,7 +98,7 @@ let stars = [];
 heroCanvas.width = window.innerWidth;
 heroCanvas.height = window.innerHeight;
 
-// Generate random stars
+
 function generateStars() {
     stars = [];
     for (let i = 0; i < 100; i++) {
@@ -142,12 +143,12 @@ function animateStars() {
 
 animateStars();
 
-// Responsive canvas adjustment
+
 window.addEventListener('resize', () => {
     heroCanvas.width = window.innerWidth;
     heroCanvas.height = window.innerHeight;
 
-    drawStars(); // Redraw stars after resizing
+    drawStars(); 
 });
 
       
