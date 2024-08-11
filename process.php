@@ -1,6 +1,6 @@
 <?php
 // Your email address
-$to = "lukhele.official@gmail.com"; 
+$to = lukhele.official@gmail.com; 
 
 // Get the email from the form submission
 $email = $_POST['email'];
