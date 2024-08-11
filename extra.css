@@ -74,8 +74,8 @@ body, html {
 }
 
 .poem-card img {
-    width: 35%;
-    height: 35%;
+    width: 35px;
+    height: 35px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
