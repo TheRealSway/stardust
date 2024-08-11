@@ -84,7 +84,7 @@ body, html {
 
 .poem-card:hover p {
     display: block;
-    max-height: 500px; /* Allow expansion */
+    max-height: 1000px; 
     opacity: 1;
     transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
