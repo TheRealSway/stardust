@@ -35,65 +35,13 @@
 
 
 
-<h1 class="main-heading">Poem Collection</h1>
 
-<div class="container">
-    <div class="poem-card">
-        <img src="no1.jpg" alt="A sunset representing the poem Searching For Hope">
-        <h2>Searching For Hope</h2>
-        <p>
-            He held on to memories,<br>
-            of their bond so strong,<br>
-            But realized it was time to accept that they no longer belong.<br>
-            With a heavy heart,<br>
-            he let go of the past,<br>
-            Knowing that the love was just lust<br>
-            He was tired of smiling while holding back tears.<br>
-            Though sadness lingered,<br>
-            he found peace in release,<br>
-            Understanding that sometimes,<br>
-            it's better to find inner peace.<br>
-            For in letting go,<br>
-            he found a new start,<br>
-            And embraced the hope of mending his broken heart.
-        </p>
-    </div>
 
-    <div class="poem-card">
-        <img src="no2.jpg" alt="A comet in the sky representing the poem Me In Disguise">
-        <h2>Me In Disguise</h2>
-        <p>
-            My broken heart's never going to be healed<br>
-            It fought and lost once before<br>
-            Begged for a second chance,<br>
-            but not anymore<br>
-            Since then it's learned to close the door<br>
-            <br>
-            Why hold on to a love that's no longer there?<br>
-            She ain't going to love me anymore and I'm aware<br>
-            <br>
-            So I walked into her room<br>
-            But I was disguised<br>
-            She thinks we've been apart for a while<br>
-            But I was there the whole time<br>
-            <br>
-            It's true it's me in disguise<br>
-            I came to fulfil my last promise<br>
-            Hoping to solve this crisis
-        </p>
-    </div>
-
-    <div class="poem-card">
-        <img src="no3.jpg" alt="A symbolic image for the poem Another Poem">
-        <h2>Another Poem</h2>
-        <p>
-            This is another poem<br>
-            With lines that rhyme<br>
-            Each word carefully chosen<br>
-            To express a feeling, a thought, or a time
-        </p>
-    </div>
+  <h1 class="main-heading">Poem Collection</h1>
+<div class="container" id="poem-container">
+    <!-- Dynamic content will be inserted here by JavaScript -->
 </div>
+
 
 
 <script>
@@ -115,6 +63,26 @@
             }
         });
     });
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('poems.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('poem-container');
+            data.poems.forEach(poem => {
+                const poemCard = document.createElement('div');
+                poemCard.className = 'poem-card';
+
+                poemCard.innerHTML = `
+                    <img src="${poem.image}" alt="${poem.alt}">
+                    <h2>${poem.title}</h2>
+                    <p>${poem.content}</p>
+                `;
+
+                container.appendChild(poemCard);
+            });
+        })
+        .catch(error => console.error('Error loading poems:', error));
+});
 
    
   
