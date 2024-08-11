@@ -1,3 +1,4 @@
+
 body, html {
     margin: 0;
     padding: 0;
@@ -5,7 +6,6 @@ body, html {
     background-color: #0a0a0a;
     color: #fff;
 }
-
 
 .main-heading {
     font-size: 36px;
@@ -23,6 +23,7 @@ body, html {
     padding: 20px;
     max-width: 1300px;
     width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 .poem-card {
@@ -92,6 +93,7 @@ body, html {
 @media (max-width: 600px) {
     .container {
         grid-template-columns: 1fr;
+        gap: 15px; /* Reduced gap for smaller screens */
     }
 
     .poem-card {
