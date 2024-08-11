@@ -80,11 +80,21 @@ It fought and lost once before </p>
             <a href="#">Instagram</a>
         </div>
         <div class="subscription">
-            <form>
-                <form action="https://formspree.io/f/myzgjnjg" method="post">
-                <input type="email" placeholder="Subscribe to our newsletter">
-                <button type="submit">Subscribe</button>
-            </form>
+           <form
+  action="https://formspree.io/f/myzgjnjg"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
         </div>
     </footer>
 
