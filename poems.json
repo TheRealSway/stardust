@@ -1,0 +1,22 @@
+{
+    "poems": [
+        {
+            "title": "Searching For Hope",
+            "image": "no1.jpg",
+            "alt": "A sunset representing the poem Searching For Hope",
+            "content": "He held on to memories, of their bond so strong, But realized it was time to accept that they no longer belong. With a heavy heart, he let go of the past, Knowing that the love was just lust. He was tired of smiling while holding back tears. Though sadness lingered, he found peace in release, Understanding that sometimes, it's better to find inner peace. For in letting go, he found a new start, And embraced the hope of mending his broken heart."
+        },
+        {
+            "title": "Me In Disguise",
+            "image": "no2.jpg",
+            "alt": "A comet in the sky representing the poem Me In Disguise",
+            "content": "My broken heart's never going to be healed. It fought and lost once before. Begged for a second chance, but not anymore. Since then it's learned to close the door. Why hold on to a love that's no longer there? She ain't going to love me anymore and I'm aware. So I walked into her room. But I was disguised. She thinks we've been apart for a while, But I was there the whole time. It's true it's me in disguise. I came to fulfill my last promise, Hoping to solve this crisis."
+        },
+        {
+            "title": "Another Poem",
+            "image": "no3.jpg",
+            "alt": "A symbolic image for the poem Another Poem",
+            "content": "This is another poem, With lines that rhyme, Each word carefully chosen, To express a feeling, a thought, or a time."
+        }
+    ]
+}
